@@ -75,8 +75,8 @@
                     {% set rate = app.user.getPreferenceValue('hourly_rate') %}
                 {% endif %}
                 <tr>
-                    <td>{{ entry.begin|date_time }}</td>
-                    <td>{{ entry.end|date_time }}</td>
+                    <td>{{ entry.begin|date }}</td>
+                    <td>{{ entry.end|date }}</td>
                     <td>{{ entry.activity.name }} / {{ entry.project.name }}{% if entry.description is not empty %} - {{ entry.description }}{% endif %}</td>
                     <td contenteditable="true">{{ rate|money(model.calculator.currency) }}</td>
                     <td>{{ duration|number_format(2) }}</td>

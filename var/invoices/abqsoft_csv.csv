@@ -1,2 +1,2 @@
 start_date,start_time,end_date,end_time,hours_worked,worker,description,rate,total
-${entry.begin},${entry.begin_time},${entry.end},${entry.end_time},${entry.duration / 3600},${entry.user_name},${entry.description},${entry.rate},${entry.total}
+${entry.begin},${entry.begin_time},${entry.end},${entry.end_time},${entry.duration_hours},${entry.user_name},${entry.description},${entry.rate},${entry.total}

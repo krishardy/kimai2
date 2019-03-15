@@ -167,6 +167,7 @@ trait RendererTrait
 
         $begin = $timesheet->getBegin();
         $end = $timesheet->getEnd();
+        $duration = $timesheet->getDuration();
 
         return [
             'entry.row' => '',
@@ -175,9 +176,9 @@ trait RendererTrait
             'entry.rate' => $this->getFormattedMoney($hourlyRate, $currency),
             'entry.total' => $this->getFormattedMoney($rate, $currency),
             'entry.currency' => $currency,
-            'entry.duration' => $timesheet->getDuration(),
-            'entry.duration_minutes' => number_format($timesheet->getDuration() / 60),
-            'entry.duration_hours' => number_format($timesheet->getDuration() / 3600, 2),
+            'entry.duration' => $duration,
+            'entry.duration_minutes' => number_format($duration / 60, 0),
+            'entry.duration_hours' => number_format($duration / 3600, 2),
             'entry.begin' => $this->getFormattedDateTime($begin),
             'entry.begin_time' => $this->getFormattedTime($begin),
             'entry.begin_timestamp' => $begin->getTimestamp(),

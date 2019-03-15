@@ -177,7 +177,7 @@ trait RendererTrait
             'entry.currency' => $currency,
             'entry.duration' => $timesheet->getDuration(),
             'entry.duration_minutes' => number_format($timesheet->getDuration() / 60),
-            'entry.duration_hours' => number_format($timesheet->getDuration() / 3600),
+            'entry.duration_hours' => number_format($timesheet->getDuration() / 3600, 2),
             'entry.begin' => $this->getFormattedDateTime($begin),
             'entry.begin_time' => $this->getFormattedTime($begin),
             'entry.begin_timestamp' => $begin->getTimestamp(),

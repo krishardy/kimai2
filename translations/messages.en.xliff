@@ -772,7 +772,7 @@
             </trans-unit>
             <trans-unit id="invoice.due_days">
                 <source>invoice.due_days</source>
-                <target>Payment target</target>
+                <target>Payment due</target>
             </trans-unit>
             <trans-unit id="invoice.from">
                 <source>invoice.from</source>
